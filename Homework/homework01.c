@@ -7,4 +7,5 @@ int main(int argc, char*argv[]) {
   printf("What is your name: ");
   scanf("%s", input);
   printf("\n Hello, %s\n", input);
+  exit(0);
 }
