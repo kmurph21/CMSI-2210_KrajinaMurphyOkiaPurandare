@@ -1,20 +1,59 @@
 What is a computer system?
+A computer system is a set of layers, where each layer is working on the actions of the one beneath it.
+
 What are some of the parts of a computer system?
+Parts of any computer system include input as well as output hardware components, such as keyboard, printer, screen, television, mouse, projector, microphone, etc.
+
 What is the difference between a compiled language and an intepreted language?
+Compiled language is machine code and interpreted language can be read by an interpreter so that someone can test and debug the code.
+
 Is C a compiled language?
+Yes, because its course code is translated into machine code by a compiler before execution
+
 Who invented the C language?
+Dennis Ritchie
+
 How long has C been in use?
+Was created in 1972, so over 50 years
+
 Is a compiler a translator?
+Yes it does source code to assembly code.
+
 Is an assembler a translator?
+Yes it does assembly code to machine code.
+
 What is the command to list out the contents of a directory on a mac terminal window?
+ls
+
 What does the C function atof() do?
+Converts a string into a floating point number.
+
 What are the bottom two layers of a computer system? Give a brief desciption of each.
+Digital logic layer, and control layer. Digital logic is a hardware where all the operations of the computer run on. The control layer uses the hardware and contains microcode that uses the hardware from the layer below it. 
+
 What are the three steps of the Von Neumann Architecture?
+Three main parts are the main memory, CPU, and input/output system.
+
 What is the purpose of an ALU?
+The ALU stands for Arithmetic Logic Unit and it does all the calculations and decision making in the computer.
+
 What is a register?
+A register is used to keep the instruction’s address.
+
 What is one difference between Application software and System software?
+Application software helps users complete specific tasks, while system software is used to help manage the computer’s hardware and run the operating system
+
 Is the phrase cmp rdi, rsi machine language?
+Yes, it is assembly language
+
 How many buses are included in the system bus?
+3
+
 What is the decimal value of 100101112?
+2^7 + 2^4 + 2^2 + 2^1 + 2^0 = 151
+
 What is the decimal value of 111111112?
+2^8 - 1 = 255
+
 What is the largest unsigned integer value that will fit into 16 bits?
+(1111111111111111) 2^16 - 1 = 65,535
