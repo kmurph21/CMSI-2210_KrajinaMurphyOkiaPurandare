@@ -30,11 +30,6 @@ SPECIFIC COMMENTS/FEEDBACK:
 
 Nice work here, looks like everything is working for you.
 
-If you got a warning about using "gets()" when you compiled your
-   "sayhelloplus.c" program, try using a different function.  Look up
-   the "C" functions on the Internet and see if you can find something
-   else to use, like "scanf()" or "fgets()" or something else.
-
 As a challenge to yourselves, see if you can find a different way of reading
    values from the user.  There are several different ways of doing that, so
    do a little research to see what else is available.
