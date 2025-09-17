@@ -1,0 +1,67 @@
+
+
+Evaluation Criteria ~ homework02
+CMSI 2210 Section 02 Fall 2025
+=================================
+
+BOOK PROBLEMS
+   Question 01    1/1 pt.
+   Question 02    1/1 pt.
+   Question 03    0/1 pt.
+   Question 04    1/1 pt.
+   Question 05    1/1 pt.
+   Question 06    1/1 pt.
+   Question 07    1/1 pt.
+   Question 08    1/1 pt.
+   Question 09    1/1 pt.
+   Question 10    1/1 pt.
+   Question 11    1/1 pt.
+   Question 12    0/1 pt.
+   Question 13    1/1 pt.
+   Question 14    0/1 pt.
+   Question 15    1/1 pt.
+   Question 16    1/1 pt.
+   Question 17    0/1 pt.
+   Question 18    1/1 pt.
+   Question 19    1/1 pt.
+   Question 20    1/1 pt.
+
+Total possible points 20
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 16/20 which is 80% which is a B
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+problem 1, your answer is a bit simplistic.  A computer system is more than
+   the Von Neumann architecture.  Think of the Internet as a giant computer
+   and you'll see what I mean.
+
+problem 3, a compiled language uses a compiler to translate human-readable
+   code into assembly code and then into machine code which can be executed
+   on the processor; the operations happen BEFORE the program runs.  An
+   interpreted language translates the human-readable code directly into
+   the machine instructions line-by-line as it is read and executes each of
+   the instructions through an 'interpreter' program.  Testing/debugging the
+   code is an entirely separate issue.
+
+problem 9, don't forget that there are LOTS of options you can use with the
+   "ls" command to get more information and/or format the output!
+
+problem 12, the answer "fetch, decode, execute" is all that was needed.  The
+   CPU, memory, and I/O system are parts of the computer system but actually
+   have little to do with the "Von Neumann" architecture.  The problem asked
+   for the "three steps", not the parts.
+
+problem 14, your answer misses the point.  Your answer describes ONE TYPE of
+   register but there are many more types.  A register is a small, very fast
+   memory unit that is part of the CPU.
+
+problem 16, "cmp rdi, rsi" is NOT machine language, it is assembly code.  The
+   machine language is ALWAYS only ones and zeros.  Your "yes" answer is not
+   correct, but your explanation is right.
+
+Otherwise, nice job!
