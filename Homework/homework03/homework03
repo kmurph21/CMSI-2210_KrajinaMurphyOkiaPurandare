@@ -7,52 +7,52 @@ SECOND NOTE: If you write these out and show your work, you can get partial cred
 Even though each problem is worth one point, you can still get 0.25 point, 0.5 point, or even 0.9 point if you show your calculations. 
 However, if you are 100% SURE that your answer is correct, feel free to only submit the answer.
 
-1. Binary 10111101 in hex is:
+1) Binary 10111101 in hex is:
 1011 1101 -> 11 13 -> BD
-2. Binary 1011110100000001 as an unsigned decimal is:
+2) Binary 1011110100000001 as an unsigned decimal is:
 11 13 0 1 -> BD01 -> 11*16^3 + 13*16^2 + 0*16^1 + 1*16^0 = 45056 + 3328 + 0 + 1 = 48,385
-3. Binary 1011110100000001 as a signed decimal is:
+3) Binary 1011110100000001 as a signed decimal is:
 starts with 1 so negative so 0100 0010 1111 1110 + 1 = 0100 0010 1111 1111 -> 4 2 15 15 -> 42FF 
 -> 4*16^3 + 2*16^2 + 15*16^1 + 15*16^0 = 16384 + 512 + 240 + 15 = -17,151
-4. Decimal 8000 encoded in 16-bits (unsigned) is in hex:
+4) Decimal 8000 encoded in 16-bits (unsigned) is in hex:
 16^3 highest goes into 8000 once (1) with remainder 3904 then 16^2 goes into that 15 times remainder 
 64 then 16 goes into 64 4 times remainder 0 then 1 goes into 0 0 times so we get 0x1F40
-5. Decimal 8000 encoded in 16-bits (signed) is in hex:
+5) Decimal 8000 encoded in 16-bits (signed) is in hex:
 1F40 -> 0001 1111 0100 0000 leads with a 0 so positive so it is 0x1F40
-6. Decimal -11 encoded in 16-bits (signed) is in hex:
+6) Decimal -11 encoded in 16-bits (signed) is in hex:
 11 -> binary is 0000 0000 0000 1011 since negative do 1111 1111 1111 0100 + 1 = 1111 1111 1111 0101 
 which is FFF5 so we get 0xFFF5
-7. Decimal -32717 encoded in 16-bits (signed) is in hex:
-8. Hex FAC3 in binary is:
-9. Hex FAC3 as an unsigned decimal is:
-10. Hex FAC3 as a signed decimal is:
-11. Hex 0064 in binary is:
-12. Hex 0064 as an unsigned decimal is:
-13. Hex 0064 as a signed decimal is:
-14. Hex 8000 in binary is:
-15. Hex 8000 as an unsigned decimal is:
-16. Hex 8000 as a signed decimal is:
-17. If we had 20-bit registers, the smallest signed decimal integer value would be:
-18. If we had 20-bit registers, the largest signed decimal integer value would be:
-19. The modular sum of 16-bit hex values 3511 + 4FFC is:
-20. The saturated sum of 16-bit hex values 3511 + 4FFC is:
-21. The 16-bit operation 0x3511 + 0x4FFC has a carry (Y or N):
-22. The 16-bit operation 0x3511 + 0x4FFC has a overflows (Y or N):
+7) Decimal -32717 encoded in 16-bits (signed) is in hex:
+8) Hex FAC3 in binary is:
+9) Hex FAC3 as an unsigned decimal is:
+10) Hex FAC3 as a signed decimal is:
+11) Hex 0064 in binary is:
+12) Hex 0064 as an unsigned decimal is:
+13) Hex 0064 as a signed decimal is:
+14) Hex 8000 in binary is:
+15) Hex 8000 as an unsigned decimal is:
+16) Hex 8000 as a signed decimal is:
+17) If we had 20-bit registers, the smallest signed decimal integer value would be:
+18) If we had 20-bit registers, the largest signed decimal integer value would be:
+19) The modular sum of 16-bit hex values 3511 + 4FFC is:
+20) The saturated sum of 16-bit hex values 3511 + 4FFC is:
+21) The 16-bit operation 0x3511 + 0x4FFC has a carry (Y or N):
+22) The 16-bit operation 0x3511 + 0x4FFC has a overflows (Y or N):
 
-23. The modular sum of 16-bit hex values 6159 + F702 is:
-24. The saturated sum of 16-bit hex values 6159 + F702 is:
-25. The 16-bit operation 0x6159 + 0xF702 has a carry (Y or N):
-26. The 16-bit operation 0x6159 + 0xF702 has a overflows (Y or N):
-27. The modular sum of 16-bit hex values EEEE + C00C is:
-28. The saturated sum of 16-bit hex values EEEE + C00C is:
-29. The 16-bit operation 9EEE + AB0C has a carry (Y or N):
-30. The 16-bit operation 9EEE + AB0C has a overflows (Y or N):
-31. The negation of 16-bit word 0xB00F is:
-32. The negation of 16-bit word 0x2232 is:
-33. The negation of 16-bit word 0x8000 is:
-34. The negation of 32-bit word 0xFFF329BA is:
-35. Hex 43700000, when interpreted as an IEEE-754 pattern, is in decimal:
-36. Hex C0FF0000, when interpreted as an IEEE-754 pattern, is in decimal:
+23) The modular sum of 16-bit hex values 6159 + F702 is:
+24) The saturated sum of 16-bit hex values 6159 + F702 is:
+25) The 16-bit operation 0x6159 + 0xF702 has a carry (Y or N):
+26) The 16-bit operation 0x6159 + 0xF702 has a overflows (Y or N):
+27) The modular sum of 16-bit hex values EEEE + C00C is:
+28) The saturated sum of 16-bit hex values EEEE + C00C is:
+29) The 16-bit operation 9EEE + AB0C has a carry (Y or N):
+30) The 16-bit operation 9EEE + AB0C has a overflows (Y or N):
+31) The negation of 16-bit word 0xB00F is:
+32) The negation of 16-bit word 0x2232 is:
+33) The negation of 16-bit word 0x8000 is:
+34) The negation of 32-bit word 0xFFF329BA is:
+35) Hex 43700000, when interpreted as an IEEE-754 pattern, is in decimal:
+36) Hex C0FF0000, when interpreted as an IEEE-754 pattern, is in decimal:
 
 
 These problems are difficult and will require you to do some research to get the answers. 
@@ -62,14 +62,14 @@ For any you attempt for which your answer is incorrect, you will NOT be penalize
 NOTE: float means floating point, a number with a decimal point in it like 123.45. 
 The terms 'single precision float' and '32-bit float' are treated as the same thing.
   
-37. 96.03125 as a 32-bit float, in hex is:
-38. -16777216 as a 32-bit float, in hex is:
-39. The largest finite IEEE-754 single precision float, in hex is:
-40. The smallest finite IEEE-754 single precision float, in hex is:
-41. The largest nonzero negative IEEE-754 single precision float, in hex is:
-42. The smallest nonezero positive IEEE-754 single precision float, in hex is:
-43. -5.125 X 290 as a 32-bit float, in hex is:
-44. 2-138 as a 32-bit float, in hex is:
-45. 1.5 X 2-143 as a 32-bit float, in hex is:
-46. Try this for a challenge, a puzzle, or the experience:
+37) 96.03125 as a 32-bit float, in hex is:
+38) -16777216 as a 32-bit float, in hex is:
+39) The largest finite IEEE-754 single precision float, in hex is:
+40) The smallest finite IEEE-754 single precision float, in hex is:
+41) The largest nonzero negative IEEE-754 single precision float, in hex is:
+42) The smallest nonezero positive IEEE-754 single precision float, in hex is:
+43) -5.125 X 290 as a 32-bit float, in hex is:
+44) 2-138 as a 32-bit float, in hex is:
+45) 1.5 X 2-143 as a 32-bit float, in hex is:
+46) Try this for a challenge, a puzzle, or the experience:
 Hex C059000000000000, when iterpreted as a 64-bit IEEE-754 pattern, is in decimal:
