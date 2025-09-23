@@ -8,11 +8,20 @@ Even though each problem is worth one point, you can still get 0.25 point, 0.5 p
 However, if you are 100% SURE that your answer is correct, feel free to only submit the answer.
 
 1. Binary 10111101 in hex is:
+1011 1101 -> 11 13 -> BD
 2. Binary 1011110100000001 as an unsigned decimal is:
+11 13 0 1 -> BD01 -> 11*16^3 + 13*16^2 + 0*16^1 + 1*16^0 = 45056 + 3328 + 0 + 1 = 48,385
 3. Binary 1011110100000001 as a signed decimal is:
+starts with 1 so negative so 0100 0010 1111 1110 + 1 = 0100 0010 1111 1111 -> 4 2 15 15 -> 42FF 
+-> 4*16^3 + 2*16^2 + 15*16^1 + 15*16^0 = 16384 + 512 + 240 + 15 = -17,151
 4. Decimal 8000 encoded in 16-bits (unsigned) is in hex:
+16^3 highest goes into 8000 once (1) with remainder 3904 then 16^2 goes into that 15 times remainder 
+64 then 16 goes into 64 4 times remainder 0 then 1 goes into 0 0 times so we get 0x1F40
 5. Decimal 8000 encoded in 16-bits (signed) is in hex:
+1F40 -> 0001 1111 0100 0000 leads with a 0 so positive so it is 0x1F40
 6. Decimal -11 encoded in 16-bits (signed) is in hex:
+11 -> binary is 0000 0000 0000 1011 since negative do 1111 1111 1111 0100 + 1 = 1111 1111 1111 0101 
+which is FFF5 so we get 0xFFF5
 7. Decimal -32717 encoded in 16-bits (signed) is in hex:
 8. Hex FAC3 in binary is:
 9. Hex FAC3 as an unsigned decimal is:
