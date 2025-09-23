@@ -70,6 +70,9 @@ NOTE: float means floating point, a number with a decimal point in it like 123.4
 The terms 'single precision float' and '32-bit float' are treated as the same thing.
   
 37) 96.03125 as a 32-bit float, in hex is:
+positive so sign 0 96/2=48 r0, 48/2=24 r0, 24/2=12 r0, 12/2=6 r0, 6/2=3 r0, 3/2=1 r1, ½=0 r1 -> 0110 0000. .03125*2=.0625 r0, 
+.0625*2=.125 r0, .125*25 r0, .25*2=.5 r0, .5*2=1 r1 -> .00001. So the binary is 01100000.00001. 0110 = 6, 0000 = 0 = 0x60. .0000 1 -> 
+0000=0 then 1000 = 8 so its .08. The hex form is 0x60.08.
 38) -16777216 as a 32-bit float, in hex is:
 39) The largest finite IEEE-754 single precision float, in hex is:
 40) The smallest finite IEEE-754 single precision float, in hex is:
