@@ -34,14 +34,19 @@ which is FFF5 so we get 0xFFF5
 16) Hex 8000 as a signed decimal is:
 17) If we had 20-bit registers, the smallest signed decimal integer value would be:
 18) If we had 20-bit registers, the largest signed decimal integer value would be:
-  524287
+  max = 2^(20−1)−1 = 2^(19)−1
+  2^(19) = 524288
+  2^(19) - 1 = 524287
 19) The modular sum of 16-bit hex values 3511 + 4FFC is:
+  3   5   1   1
+ + 4   F   F   C
+ ----------------
+   8   5   0   D
   0x850D
 20) The saturated sum of 16-bit hex values 3511 + 4FFC is:
   850D
 21) The 16-bit operation 0x3511 + 0x4FFC has a carry (Y or N):
-  No. Maximum representable in 16 bits: 
-0𝑥𝐹𝐹𝐹𝐹 = 65,535 Our sum: 34,061 < 65,535. Since the sum fits entirely in 16 bits, no carry is generated.
+  No. Maximum representable in 16 bits: 0𝑥𝐹𝐹𝐹𝐹 = 65,535. Our sum: 34,061 < 65,535. Since the sum fits entirely in 16 bits, no carry is generated.
 22) The 16-bit operation 0x3511 + 0x4FFC has a overflows (Y or N):
   Yes. Signed 16-bit max = +32,767. Our result 34,061 > 32,767. That exceeds the positive bound.
 
@@ -66,9 +71,21 @@ No. Positive overflow is over 32,767, negative over flow is below -32,8=768. 615
 34) The negation of 32-bit word 0xFFF329BA is:
     0x000CD646
 35) Hex 43700000, when interpreted as an IEEE-754 pattern, is in decimal:
-  240.0
+  0x43 70 00 00 → 0100 0011 0111 0000 0000 0000 0000 0000
+  1000 0110 = 0𝑥86= 134
+  0x86=134 → unbiased E=134−127=7
+  0x700000 → 
+  𝑓=0𝑥700000/2^23 = 7,340,032/8,388,608 = 0.875
+  (+1)×27×1.875=128×1.875 = 240.0
+
+  =240.0
 36) Hex C0FF0000, when interpreted as an IEEE-754 pattern, is in decimal:
-  −7.96875
+  0xC0 FF 00 00 → 1100 0000 1111 1111 0000 0000 0000 0000
+  1000 0001 = 0𝑥81 = 129. unbiased E = 129−127 = 2
+  0x7F0000 → 𝑓=0𝑥7𝐹0000223 = 8,323,072/8,388,608 =0.9921875 =127/128
+  −1×22×1.9921875=−4×1.9921875=−7.96875
+
+  = −7.96875
 
 These problems are difficult and will require you to do some research to get the answers. 
 You may use websites if you wish to find the answers, as long as you include a URL link to the page you used. 
