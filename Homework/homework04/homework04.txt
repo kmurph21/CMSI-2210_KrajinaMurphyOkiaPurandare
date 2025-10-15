@@ -56,8 +56,23 @@ Assume the two inputs are read in from port 0x100. Write the result to port 0x20
 8. For the sample single-accumulator computer discussed in class, give a code fragment, in assembly language of the stanley/penguin language, that swaps the accumulator and memory address 0x30AA. 
 You do not need to write machine code for this problem.
 
+JMP start
+temp1 : 0
+temp2 : 0
+start :   STORE [temp1]
+LOAD 0x30AA
+STORE [temp2]
+LOAD [temp1]
+STORE 0x30AA
+LOAD [temp2]
+end : JMP end	
+
 9. For the sample single-accumulator computer discussed in class, give a code fragment, in assembly language of the stanley/penguin language that has the effect of jumping to the code 
 at address 0x837BBE1 if the value in the accumulator is greater than or equal to 0. You do not need to write machine code for this problem.
+
+JGZ start
+JZ start
+start : JMP 0x837BBE1
 
 10. Part 1: Explain, at a high-level, what the following sequence of instructions does. In other words, suppose a programmer has stored data in r8 and r9. After executing these instructions, 
 what does the programmer notice about the data? [HINT: It will help if you pick some binary values and walk through the operations.]
@@ -66,3 +81,7 @@ what does the programmer notice about the data? [HINT: It will help if you pick 
       xor r8, r9
                     
 Part 2: Also state as briefly as possible why that effect happens.
+
+The value stored at r8 will now be stored at r9 and the value stored at r9 will now be stored at r8. If we assume r8 is False and r9 is True, 
+the first xor returns True or False to r8. The second xor will therefore return True or False or True (which is False) to r9. And the last 
+xor will return False or True or False (which is True) to r8. Thus, at the end of the sequence, r8 and r9 have swapped values. 
