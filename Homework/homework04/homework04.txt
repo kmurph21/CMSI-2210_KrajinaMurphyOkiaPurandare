@@ -47,11 +47,58 @@ Make your program ask the user for the value of N. Be sure to check for errors i
 
 5. For the sample Stanley/Penguin single-accumulator computer discussed in class, write a complete assembly language program in the Stanley/Penguin language that sends 
 the values 0 through 255 out to port 0x8. NOTE: the machine code for this will be written in the next problem.
+  JMP   start            ; jump past data
+ZERO:   .BYTE 0x00       ; store 0
+ONE:     .BYTE 0x01      ; store 1
+
+start:   LOAD  ZERO       ; load zero into A
+loop:   WRITE port 8      ; send A to port 8
+           ADD   ONE      ; add one to A
+           JZ    done     ; if A is zero again, stop
+           JMP   loop     ; go back and repeat
+done:  JMP   done         ;  end program
+
 
 6. Translate your Stanley/Penguin language program in the previous problem to machine language.
 
+C0000003    JMP   start      ; jump over data
+00000000    ZERO: 0          ; store 0
+00000001    ONE: 1           ; store 1
+00000001    LOAD  [ZERO]     ; load 0 into A
+30000008    WRITE port 8     ; send A to port 8
+40000002    ADD   [ONE]      ; A = A + 1
+D0000008    JZ    done       ; if A is 0 again, stop
+C0000004    JMP   loop       ; go back and repeat
+C0000008    done: JMP done   ; end program
+
+
 7. For the sample single-accumulator computer discussed in class, write a complete assembly language program in the stanley/penguin language that computes a greatest common divisor. 
 Assume the two inputs are read in from port 0x100. Write the result to port 0x200. You do not need to write machine code for this problem.
+
+Tmp:    .BYTE 0x00           ; temp
+
+start:  READ  0x0100         ; read first input
+        STORE [inputA]       ; save A
+        READ  0x0100         ; read second input
+        STORE [inputB]       ; save B
+
+gcd:  LOAD  [inputB]             ; A = B
+        JZ    done           ; if B == 0
+        LOAD  [inputA]       ; A = A
+        MOD   [inputB]       ; A = A % B
+        STORE [Tmp]          ; Tmp = rem
+        LOAD  [inputB]       ; A = old B
+        STORE [inputA]       ; [inputA] = old B
+        LOAD  [Tmp]          ; A = rem
+        STORE [inputB]       ; B = rem
+        JMP   gcd            ; repeat
+
+done:   LOAD  [inputA]       ; A = gcd
+        WRITE 0x0200         ; output
+        JMP   done           ; stop
+
+
+
 
 8. For the sample single-accumulator computer discussed in class, give a code fragment, in assembly language of the stanley/penguin language, that swaps the accumulator and memory address 0x30AA. 
 You do not need to write machine code for this problem.
