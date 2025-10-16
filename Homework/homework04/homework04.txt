@@ -32,11 +32,19 @@ c := (NOTa1 AND b1) OR (NOTa1 AND a0 AND NOTb1) OR (a1 AND a0 AND b1 AND NOTb0)
 3. Given a 32-bit register, write logic instructions to perform the following operations. For parts (c) and (f) assume an unsigned interpretation; 
 for part (d) assume a signed interpretation. NOTE THAT THE STARTING VALUE OF THE REGISTER IS NOT IMPORTANT — your solution MUST WORK for any starting value.
 Clear all even numbered bits.
+ R is the register (32 bit)
+ So, AND R, 0xAAAAAAAA
 Set the last three bits.
+ OR R, 0X7
 Compute the remainder when divided by 8.
+ AND R, 0x7
 Make the value -1
+ MOV R, 0XFFFFFFFF
+ R:= -1
 Complement the two highest order bits ['complement' means change the binary value to its opposite state — if it's a '1' it becomes a '0' and/or the other way round]
+ XOR R, 0xC0000000
 Compute the largest multiple of 8 less than or equal to the value itself [a multiple of 8 is a value that can be divided evenly by 8, like 16, 32, 48, 64, 80, etc.]
+ AND R, 0XFFFFFFF8
 
 4. Write a simple C program to play the game fizz-buzz. This game lists all integer numbers from one to N in order, except for the following cases:
 1) if a number is divisible by 3 the program should print fizz
@@ -44,6 +52,36 @@ Compute the largest multiple of 8 less than or equal to the value itself [a mult
 3) if a number is divisible by both 3 AND 5 the program should print fizz-buzz
 4) all other cases should simply print the number
 Make your program ask the user for the value of N. Be sure to check for errors in the entry; for example, entering a zero or a negative number.
+   #include <stdio.h>
+
+int main(){
+
+    int N;
+    printf("Choose a value of N (positive integer): ");
+    scanf("%d", &N);
+
+    while (N <= 0){
+        printf("Error, the value you have entered is not a positive integer...");
+        printf("Choose a value of N (positive integer): ");
+        scanf("%d", &N);
+    }
+
+    for(int i = 0; i <= N; i++){
+        if (i % 3 == 0){
+            printf("fizz\n");
+        }
+        else if (i % 5 == 0){
+            printf("buzz\n");
+        }
+        else if (i % 15 == 0){
+            printf("fizz-buzz\n");
+        }
+        else {
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}
 
 5. For the sample Stanley/Penguin single-accumulator computer discussed in class, write a complete assembly language program in the Stanley/Penguin language that sends 
 the values 0 through 255 out to port 0x8. NOTE: the machine code for this will be written in the next problem.
