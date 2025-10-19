@@ -1,0 +1,60 @@
+
+
+Evaluation Criteria ~ homework04
+CMSI 2210 Section 02 Fall 2025
+=================================
+
+LOGIC DESIGN
+   Logic Question 1a         10/10 pts.
+   Logic Question 1b          5/ 5 pts.
+   Logic Question 2          10/10 pts.
+
+REGISTER OPERATIONS
+   Register clear even        2/ 2 pts.
+   Register set last 3        2/ 2 pts.
+   Reg./8 remainder           2/ 2 pts.
+   Reg. set to -1             0/ 2 pts.
+   Reg. invert 2 MSBs         2/ 2 pts.
+   Register computation       2/ 2 pts.
+
+"C" CODE
+   Q4 - fizz-buzz            10/10 pts.
+
+STANLEY/PENGUIN ASSEMBLY
+   Q5 - output 0 - 255       10/10 pts.
+   Q6 - machine code          5/ 5 pts.
+   Q7 - GCD prog.            10/10 pts.
+   Q8 - swap frag             5/ 5 pts.
+   Q9 - jmp to addr           5/ 5 pts.
+
+REGISTER INVESTIGATION
+   Q10a - high level expl.    4/ 4 pts.
+   Q10b - Why?                4/ 4 pts.
+
+
+Total possible points        90 points
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 88.0/ 90.0 which is 97.78% which is an A-plus
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+problem 3d, you are supposed to use LOGIC instructions, NOT MNEMONICS.  You
+   need to OR the value, not use a "MOV" instruction.
+
+Good job!
+
+========================================================
+SEMESTER SCORE SO FAR:
+
+   Homework01  100.00% of 5 points = 5.00 points
+   Homework02   80.00% of 5 points = 4.00 points
+   Homework03  107.00% of 5 points = 5.35 points
+   homework04   97.78% of 5 points = 4.89 points
+                             total: 19.24 out of 20.0 = 96.19%
+                                which is an A
+
+Keep it up, you're doing great!
