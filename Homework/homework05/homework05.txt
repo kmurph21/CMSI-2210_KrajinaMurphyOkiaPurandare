@@ -3,6 +3,26 @@ You may take the base-10 number in from the command line, or you may prompt the 
 and read in her response [your option]. Your output should be a string of binary digits which correspond
 to the base-10 value. For example, running the program with dec2bin 65535 [or just dec2bin if asking the 
 user] should produce the output string 00000000000000001111111111111111. Use unsigned integers.
+#include<stdio.h>
+#include<stlib.h>
+int main(int argc, char *argv[]) {
+  unisgned int num;
+  if (argc==2) {
+    num=(unsigned int)atoi(argv[1]);
+  }
+  else {
+    printf("Enter a base 10 number:");
+    scanf("%u", &num);
+  }
+  char binary[33];
+  binary[32]='\0';
+  for(int i=31; i>=0; i--) {
+    binary[i]=num(num&1)?'1':'0';
+    num>>=1;
+  }
+  printf("%s\n", binary);
+  return 0;
+}
 
 2. Write a C program like problem #1 to to make the program dec2hex.c which will output the 32-bit or 
 64-bit [8-digit or 16-digit] hexidecimal equivalent of its input. For this modification, you must also
