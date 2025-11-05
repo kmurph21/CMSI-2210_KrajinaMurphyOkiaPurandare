@@ -39,6 +39,31 @@ to make things easier.]
 number take from the command line. Output the values in a nice table, using a format specifier that 
 will allow for enough space for the results to be neatly aligned in columns.
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s <N>\n", argv[0]);
+        return 1;
+    }
+
+    int N = atoi(argv[1]); // convert the command-line argument to an integer
+
+    printf("Times Tables from 2 to %d:\n\n", N);
+
+    // loop from 1 to 12 for each multiplier row
+    for (int i = 1; i <= 12; i++) {
+        for (int j = 2; j <= N; j++) {
+            printf("%4d", i * j); // print each product in a neat column
+        }
+        printf("\n"); // new line after each row
+    }
+
+    return 0;
+}
+
+
 4. Write a C program holdit.c that times you as you hold your breath. The program must put out a short 
 message that has instructions on what to do, which should read something like,
 "This program will time how long you can hold your breath. Take a deep breath, then press the 'Enter' 
