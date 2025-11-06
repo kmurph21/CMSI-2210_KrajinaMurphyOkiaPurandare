@@ -101,3 +101,42 @@ environment.] When the file has been completely read, close the file and write o
 words. Be sure you handle error conditions like files that don't exist or errors encountered while 
 reading the file. You should also be able to handle files that are in different directories from where 
 your program resides.
+
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+
+    FILE *file;
+    int ch;
+    int word_count = 0;
+    int inside_word = 0;
+
+   
+    if (argc != 2) {
+        printf("Usage: %s <filename>\n", argv[0]);
+        return 1;
+    }
+    file = fopen(argv[1], "r");
+    if (file == NULL) {
+        printf("Error: Could not open file.\n");
+        return 1;
+    }
+
+    while ((ch = fgetc(file)) != EOF) {
+        if (ch == ' ' || ch == '\n' || ch == '\t') {
+            inside_word = 0;
+        } else {
+            if (inside_word == 0) {
+                word_count++;
+                inside_word = 1;
+            }
+        }
+    }
+
+    fclose(file);
+
+    printf("Number of words: %d\n", word_count);
+
+    return 0;
+}
+
