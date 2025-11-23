@@ -53,7 +53,7 @@ SEMESTER SCORE SO FAR:
    Homework01  100.00% of 5 points = 5.00 points
    Homework02   80.00% of 5 points = 4.00 points
    Homework03  107.00% of 5 points = 5.35 points
-   homework04   97.78% of 5 points = 4.89 points
+   Homework04   97.78% of 5 points = 4.89 points
                              total: 19.24 out of 20.0 = 96.19%
                                 which is an A
 

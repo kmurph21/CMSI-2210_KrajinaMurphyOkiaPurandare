@@ -1,0 +1,54 @@
+
+
+Evaluation Criteria ~ homework05
+CMSI 2210 Section 02 Fall 2025
+=================================
+
+dec2bin
+   compiles       [ 5 pts.]      0 points earned
+   error checks   [ 5 pts.]      0 points earned
+   runs  tests    [10 pts.]      0 points earned
+dec2hex
+   compiles       [ 5 pts.]      0 points earned
+   error checks   [ 5 pts.]      0 points earned
+   32-bit tests   [ 5 pts.]      0 points earned
+   64-bit tests   [ 5 pts.]      0 points earned
+timesTables
+   compiles       [ 5 pts.]      0 points earned
+   error checks   [ 5 pts.]      0 points earned
+   runs  tests    [10 pts.]      0 points earned
+holdit
+   compiles       [ 5 pts.]      0 points earned
+   runs tests     [15 pts.]      0 points earned
+wordcount
+   compiles       [ 5 pts.]      0 points earned
+   error checks   [ 5 pts.]      0 points earned
+   runs tests     [10 pts.]      0 points earned
+
+ Total possible ~ 100 points
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 0/100 which is 0.00% which is NOT an A-plus
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+I don't see your submission for homework 5 anywhere.  DANG!
+
+========================================================
+SEMESTER SCORE SO FAR:
+
+   Homework01  100.00% of  5 points =  5.00 points
+   Homework02   80.00% of  5 points =  4.00 points
+   Homework03  107.00% of  5 points =  5.35 points
+   homework04   97.78% of  5 points =  4.89 points
+   Homework05   00.00% of 10 points =  0.00 points
+                                total: 19.24 out of 30.00 = 64.13%
+                                which is a D on the homework total.
+
+Not sure what happened here, but I can't evaluate what isn't there.
+
+Make sure you do this and turn it in ASAP.  I'll evaluate it so you can
+   still get feedback from the assignment.
