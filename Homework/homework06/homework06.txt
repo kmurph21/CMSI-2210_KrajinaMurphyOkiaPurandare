@@ -1,0 +1,33 @@
+1. Using a previous homework problem with code from our stanley/penguin language as your guide, write an assembly program using nasm or 
+ARM called findGCD.nasm or findGCD.arm which will find the GCD of the two numbers. Test your program using the numbers 3113041662 and 
+11570925 which should produce the value 462837. Read the two numbers from the keyboard at port stdin and write the result to port stdout.
+
+2. Copy your program from the previous problem to a new file called findGCDfunc.nasm or findGCDfunc.arm. Change the code to be a nasm or 
+ARM function which is able to be called from a C program. Then write a program gcdFinder.c containing the code in C to call your new 
+function. Use the assert() functions from the C assert library to test that your GCD finder code is working properly. You can link the 
+assert library into your program by using #include <assert.h> as you've seen in class. Your assembly code should take the two numbers as 
+arguments which are passed from the C code.
+  
+3. Parity is a term which is applied when counting the number of bits that are set to 1 in a sequence of bits. It is used to help guarantee 
+that nothing has gone wrong with the bit sequence during transmission. Parity is calculated based on the number of 1 bits in a byte, and a 
+ninth bit, the parity bit, is either set or cleared to achieve the proper parity, either even or odd. For example, for the byte 01101001, 
+assuming even parity, the parity bit would be cleared so that the count of 1 bits remains even for all nine bits; for the byte 10101110, 
+assuming even parity, the parity bit would be set so that the count of 1 bits remains even. Note that the parity bit IS NOT PART of the 
+byte, IT IS A NINTH BIT which is separate from the byte in question. Write a nasm function called paritygen.nasm that will count the one bits in a byte of data and print the proper value for the parity bit 
+assuming we are using odd parity. Note that if there is an even number of ones, your program will print a 1 and if there is an odd number it 
+will print a 0.
+
+4. In networking, it is necessary to make sure that bytes are transimitted in the proper order so the receiving device can interpret them 
+correctly. This requires that big-endian and little-endian values are converted to something called Network Byte Order before they are 
+transmitted. For this problem, write a C program whichEndIsUp.c that will determine whether your computer is big-endian or little-endian 
+as was discussed in class.
+
+5. Building on the previous problem, write a C function makeNBOC.c that takes a number as an argument, checks to see if the order needs 
+to be swapped to make Network Byte Order, and swaps its byte order, if necessary. Modify a copy of your previous program from problem 4, 
+whichendisup.c, to make a function that will determine the byte order and if it will need to be swapped. You can also research the hton() 
+and ntoh() functions to do the swapping [if you like]. Write a test program makeNBOtest.c to call your new function and display the results 
+of the function call on stdout using printf().
+  
+6. EXTRA CREDIT PROBLEM: Finally, create a nasm or ARM program called makeNBON.nasm or makeNBON.arm which does the byte order swapping BY 
+CALLING YOUR C function from problem five. Make your nasm or ARM program call the function at least five times with different values to 
+test it. The output of each test case should display on the terminal window.
