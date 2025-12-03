@@ -38,11 +38,11 @@ read_integer:
   cmp r8, rcx
   jae .ri_done ;reached end of read buffer
   movzx rdx, byte [buffer + r8] ;rdx = current char
-  cmp dl. 0x0A ;newline
+  cmp dl, 0x0A ;newline
   je .ri_done
   cmp dl, 0x0D ;carriage return
   je .ri_done
-  cmp dl, '' ;space
+  cmp dl, ' ' ;space
   je .ri_done
   cmp dl, 9 ;tab
   je .ri_done
@@ -58,15 +58,109 @@ read_integer:
   movzx rax, dl ;rax = digit char
   sub rax, '0' ;rax = digit value
   ;multiply rbx by 10
-  mov rdx, rbx
-  shl rbx, 1 ;rbx=rbx*2
-  lea rbx, [rbx+rbx*4] 
-  add rbx, rdx
   imul rbx, rbx, 10
   add rbx, rax ;rbx += digit
   inc r8
   jmp .ri_parse_loop
 
 .ri_done:
-  
-  
+  mov rax, rbx ;return value in rax
+  ret
+
+.ri_return_zero:
+  xor rax, rax
+  ret
+
+;--------------------------------------------
+;gcd
+;Inputs: RDI=a, RSI=b, Returns: RAX=gcd(a, b)
+;Uses Euclidean algorithm with 64 bit unsigned division
+;--------------------------------------------
+gcd:
+  ;handle if b==0: gcd(a, 0) = a
+
+.gcd_loop:  
+  test rsi, rsi
+  je .gcd_done
+  xor rdx, rdx ;clear RDX before div
+  mov rax, rdi
+  div rsi ;rax=rdi/rsi, rdx=rdi%rsi
+  mov rdi, rsi ;a=b
+  mov rsi, rdx ;b=remainder
+  jmp .gcd_loop
+
+.gcd_done:
+  mov rax, rdi ;result in rax
+  ret
+
+;--------------------------------------------
+;print_unit
+;prints unsigned 64 bit integer value in RAX followed by newline
+;clobbers: RBX, RDX, RCX, RDI, RSI, RAX
+;--------------------------------------------
+print_unit:
+  ;if value is zero, print "0\n"
+  test rax, rax
+  jne .print_convert
+  lea rsi, [rel buffer+62]
+  mov byte [rsi], '0'
+  mov byte [rsi+1], 0x0A
+  ;write(1, rsi, 2)
+  mov rax, 1
+  mov rdi, 1
+  mov rdx, 2
+  syscall
+  ret
+
+.print_convert:
+  lea rdi, [rel buffer+63] ;write backwards from buffer+63
+  mov byte [rdi], 0x0A ;newline at last byte
+  dec rdi
+  mov rbx, 10
+
+.print_loop:
+  xor rdx, rdx
+  div rbx ;divide RDX: RAX by 10 -> quotient in RAX, remainder in RDX
+  add dl, '0'
+  mov [rdi], dl
+  dec rdi
+  test rax, rax
+  jne .print_loop
+  inc rdi ;rdi now points to first digit
+  ;compute length=(buffer+64)-rdi
+  lea rcx, [rel buffer+64]
+  mov rdx, rcx
+  sub rdx, rdi ;rdx=length
+  ;write(1, rdi, rdx)
+  mov rax, 1
+  mov rsi, rdi
+  mov rdi, 1
+  syscall
+  ret
+
+;--------------------------------------------
+;_start - main program
+;--------------------------------------------
+_start:
+  ;read first integer, RAX
+  call read_integer
+  mov [a], rax
+  ;read second integer, RAX
+  call read_integer
+  mov [b], rax
+  ;compute gcd([a], [b])
+  mov rdi, [a]
+  mov rsi, [b] 
+  call gcd ;result in RAX
+  ;print result
+  call print_unit
+  ;exit(0)
+  mov rax, 60 ;sys exit
+  xor rdi, rdi
+  syscall
+
+;--------------------------------------------
+;nasm -f elf64 findGCD.nasm -o findGCD.o
+;ld findGCD.o -o findGCD
+; to run do: ./findGCD then type 3113041662 and 11570925 and output should be 462837
+;--------------------------------------------
