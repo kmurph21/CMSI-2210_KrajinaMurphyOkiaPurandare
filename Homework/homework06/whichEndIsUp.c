@@ -4,3 +4,22 @@ correctly. This requires that big-endian and little-endian values are converted 
 transmitted. For this problem, write a C program whichEndIsUp.c that will determine whether your computer is big-endian or little-endian 
 as was discussed in class.
 */
+
+
+#include <stdio>
+#include <stdlib>
+
+int main() {
+    unsigned int value = 1;
+    unsigned char *bytePtr = (unsigned char *)&value;
+  
+    printf("Checking system endianness...\n");
+
+    if (*byte == 1) {
+        printf("This machine is little-endian.\n");
+    } else {
+        printf("This machine is big-endian.\n");
+    }
+
+    return 0;
+}
