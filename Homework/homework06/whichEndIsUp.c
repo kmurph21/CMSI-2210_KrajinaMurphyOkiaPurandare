@@ -15,7 +15,7 @@ int main() {
   
     printf("Checking system endianness...\n");
 
-    if (*byte == 1) {
+    if (*bytePtr == 1) {
         printf("This machine is little-endian.\n");
     } else {
         printf("This machine is big-endian.\n");
