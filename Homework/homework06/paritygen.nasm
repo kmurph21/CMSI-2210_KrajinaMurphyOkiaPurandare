@@ -1,6 +1,5 @@
 ;--------------------------------------------
 ; paritygen.nasm - compute odd parity for a byte
-; Mirrors the structure of echoer.nasm
 ;  to assemble: nasm -f macho64 paritygen.nasm
 ;  to link:     gcc paritygen.o -o paritygen
 ;  to run:      ./paritygen
