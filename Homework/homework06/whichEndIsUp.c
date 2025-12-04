@@ -5,6 +5,8 @@ transmitted. For this problem, write a C program whichEndIsUp.c that will determ
 as was discussed in class.
 */
 
+#ifndef WHICHENDISUP_H
+#define WHICHENDISUP_H
 
 #include <stdio>
 #include <stdlib>
@@ -20,6 +22,8 @@ int main() {
     } else {
         printf("This machine is big-endian.\n");
     }
+
+#endif
 
     return 0;
 }
