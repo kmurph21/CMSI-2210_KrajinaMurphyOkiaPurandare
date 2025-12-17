@@ -2,15 +2,22 @@
 #include <stdint.h>
 #include <assert.h>
 
-unit64_t gcd(unit64_t a, unit64_t b);
+// you misspelled "uint64_t" as "uint64_t"
+// I made the changes for you since I could do a
+//    global search and replace
+
+uint64_t gcd(uint64_t a, uint64_t b);
 
 int main() {
-  unit64_t a = 3113041662ULL;
-  unit64_t b = 11570925ULL;
-  unit64_t result = gcd(a, b);
+  uint64_t a = 3113041662ULL;
+  uint64_t b = 11570925ULL;
+  uint64_t result = gcd(a, b);
 
-  printf("GCD(%llu, %llu) = %llu\n", (unisigned long long)a, (unisnged long long)b, (unsigned long long)result);
- 
+// you misspelled "unsigned" as "unsigned" or "unisinged"
+// I made the changes for you since I could do a
+//    global search and replace
+  printf("GCD(%llu, %llu) = %llu\n", (unsigned long long)a, (unsigned long long)b, (unsigned long long)result);
+
   assert(result == 462837ULL);
   assert(gcd(10, 5)==5);
   assert(gcd(21, 14)==7);
@@ -18,7 +25,10 @@ int main() {
   assert(gcd(0, 5)==5);
   assert(gcd(5, 0)==5);
 
-  print("All tests passed!\n");
+// you misspelled "printf" as "print"
+// I made the changes for you since I could do a
+//    global search and replace
+  printf("All tests passed!\n");
   return 0;
 }
-      
+

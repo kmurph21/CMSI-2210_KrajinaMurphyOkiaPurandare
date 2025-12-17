@@ -1,0 +1,113 @@
+
+
+Evaluation Criteria ~ homework06
+CMSI 2210 Section all Fall 2025
+=================================
+                                    score
+FINDGCD.NASM                        ------
+   nasm file assembles  [5 pts.]    5 pts.
+   nasm runs            [5 pts.]    5 pts.
+   output correct       [3 pts.]    3 pts.
+GCDFINDER
+   nasm file assembles  [5 pts.]    5 pts.
+   gcdFinder.c compiles [5 pts.]    2 pts.
+   link both files OK   [5 pts.]    5 pts.
+   nasm returns value   [5 pts.]    5 pts.
+   output correct       [3 pts.]    3 pts.
+PARITYGEN
+   nasm file assembles  [5 pts.]    5 pts.
+   nasm runs            [5 pts.]    5 pts.
+   output correct       [3 pts.]    3 pts.
+WHICHENDISUP
+   compiles no errors   [5 pts.]    3 pts.
+   runs no errors       [5 pts.]    5 pts.
+MAKENBOC.C
+   compiles no errors   [5 pts.]    0 pts.
+   uses previous func.  [5 pts.]    0 pts.
+   tester compiles      [5 pts.]    0 pts.
+   tester runs          [5 pts.]    0 pts.
+   output correct       [3 pts.]    0 pts.
+MAKENBO.NASM [Extra credit]
+   nasm file assembles  [5 pts.]    0 pts.
+   link all files OK    [5 pts.]    0 pts.
+   calls "C" function   [5 pts.]    0 pts.
+   output correct       [3 pts.]    0 pts.
+
+Total possible points 82
+   plus 18 extra credit
+   possible maximum of 118%
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 54.00/82.00 which is 65.85% plus
+    0 extra credit points which is 65.85% which is a D
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+problem 1 findGCD.nasm
+   works as advertised
+   you have a TON of code in here, much of which is things we didn't cover
+      in class.  I can't help but think you must have gotten some help from
+      the Internet or from an AI assistant which you DIDN'T CITE.  Of course
+      I have no way to prove that....  still from now on, in your future
+      classes, PLEASE CITE WHERE YOU GOT YOUR HELP!
+   you also made it hard on yourselves by NOT using "scanf()" and "printf()"
+      to handle the prompting and entering.  You could do the whole thing in
+      far fewer lines of code by doing it that way instead of using the
+      print loop and parsing stuff...  just sayin'.....
+
+problem 2 findGCDfunc.nasm & gcdFinder.c
+   I had to make several changes for you where there were misspelled words.
+      Usually I don't make those kinds of changes, I just kick back the
+      assignment for YOU to fix.  However, since the semester is over and
+      the changes were minor I made them for you at a small cost of points.
+   NOW works as advertised
+
+problem 3 paritygen.nasm
+   works as advertised
+
+problem 4 whichEndIsUp.c
+   another problem: you didn't put the ".h" on the end of your include file
+      names.  I added those for you as well.  YOU REALLY NEED TO CHECK YOUR
+      CODE BEFORE YOU SUBMIT FOR SCORE!!  There is no way this would compile
+      properly if you were following the instructions given in class.  Is it
+      possible that you are using an IDE like VSCode that is fixing these
+      mistakes behind the scenes so that you aren't even aware of them?  If
+      so, that is a DANGEROUS habit to be forming this early on....
+   NOW works as advertised
+
+problem 5 makeNBOC.c & makeNBOCtest.c
+   OK, sorry, I give up.  You have made the same mistakes in these remaining
+      files and I'm not going to fix any more of them.  You obviously didn't
+      check out this code before you committed it, since there is no way it
+      would compile without rework.
+   no credit for this one.
+
+problem 6 makeNBOC.c & makeNBON.nasm
+   no credit for this one either.
+
+========================================================
+SEMESTER HOMEWORK TOTALS:
+
+   Homework01  100.00% of  5 points =  5.00 points
+   Homework02   80.00% of  5 points =  4.00 points
+   Homework03  107.00% of  5 points =  5.35 points
+   Homework04   97.78% of  5 points =  4.89 points
+   Homework05   80.00% of 10 points =  8.00 points
+   homework06   65.85% of 15 points =  9.88 points
+                      semester total: 37.12 out of 45.00 = 82.49%
+                             which is a B-minus
+
+I'm not sure what happened at the end of the semester here.  You seemed to
+slip quite a bit.  I wish you had come to more office hours for help on the
+homework so that you could have done better.
+
+PLEASE feel free to come to my office hours if you have questions on any of
+your other classes!  My door will always be open to you and I will try my
+very best to help you with whatever I can!
+
+Nevertheless, it's been wonderful having you four in class this semester!
+Best wishes for a great holiday break and I look forward to seeing you all
+around campus in the spring!

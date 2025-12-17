@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stlib.h>
+#include<stdlib.h>
 int main(int argc, char *argv[]) {
   unisgned int num;
   if (argc==2) {
